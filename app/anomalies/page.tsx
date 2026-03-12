@@ -114,7 +114,7 @@ export default function AnomaliesPage() {
             href="/"
             className="text-xs font-bold tracking-widest text-zinc-500 transition hover:text-zinc-400"
           >
-            jeffrey-didnt-kill-himself.com
+            jeffreydidntkillhimself.com
           </Link>
           <div className="flex flex-wrap items-center gap-4 sm:gap-8">
             <Link href="/" className="nav-link text-xs font-semibold uppercase tracking-wider sm:text-sm">
