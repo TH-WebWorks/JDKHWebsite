@@ -12,6 +12,7 @@ const config: Config = {
         dark: {
           bg: "#000000",
           surface: "#0a0a0a",
+          featured: "#111111",
           border: "#27272a",
         },
       },

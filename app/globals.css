@@ -9,4 +9,20 @@
   body {
     @apply bg-black text-zinc-100 antialiased;
   }
+  p {
+    @apply leading-relaxed;
+  }
+}
+
+@layer utilities {
+  .nav-link {
+    @apply relative pb-0.5 text-zinc-400 transition-colors hover:text-zinc-100;
+  }
+  .nav-link::after {
+    content: "";
+    @apply absolute bottom-0 left-0 block h-px w-0 bg-current transition-[width] duration-200;
+  }
+  .nav-link:hover::after {
+    @apply w-full;
+  }
 }
