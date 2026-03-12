@@ -6,11 +6,8 @@ export default function Home() {
   return (
     <>
       <header className="sticky top-0 z-50 border-b border-dark-border bg-black/95 backdrop-blur supports-[backdrop-filter]:bg-black/80">
-        <nav className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-4 px-4 py-4 sm:px-6">
-          <span className="text-xs font-bold tracking-widest text-zinc-500">
-            jeffreydidntkillhimself.com
-          </span>
-          <div className="flex flex-wrap items-center gap-4 sm:gap-8">
+        <nav className="mx-auto flex max-w-5xl flex-wrap items-center justify-center gap-4 px-4 py-4 sm:gap-8 sm:px-6">
+          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-8">
             <Link href="/anomalies" className="nav-link text-xs font-semibold uppercase tracking-wider sm:text-sm">
               Anomalies
             </Link>
@@ -76,16 +73,16 @@ export default function Home() {
             className="absolute inset-0 z-[1] bg-black/80"
             aria-hidden
           />
-          <div className="relative z-10 mx-auto max-w-4xl text-center">
+          <div className="relative z-10 mx-auto flex max-w-4xl flex-col items-center text-center">
             <h1 className="text-2xl font-extrabold uppercase leading-tight tracking-[0.12em] text-white sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
               The Death of Jeffrey Epstein
             </h1>
-            <p className="mt-6 text-base font-normal text-zinc-400 sm:text-lg md:text-xl">
+            <p className="mt-6 max-w-2xl text-center text-base font-normal text-zinc-400 sm:text-lg md:text-xl">
               A public record examination of events at the Metropolitan Correctional Center — August 9–10, 2019
             </p>
             <div
               id="case-facts-panel"
-              className="case-facts-panel mx-auto mt-12 max-w-4xl grid grid-cols-1 gap-4 sm:grid-cols-3"
+              className="case-facts-panel mt-12 w-full max-w-4xl grid grid-cols-1 gap-4 sm:grid-cols-3"
             >
               <article className="rounded-md border border-white/[0.12] bg-black/40 p-5 text-center">
                 <p className="text-[11px] uppercase tracking-widest text-zinc-500">
@@ -313,13 +310,15 @@ export default function Home() {
           className="border-b border-dark-border bg-dark-surface px-4 py-28 sm:px-6 md:py-36"
         >
           <div className="mx-auto max-w-6xl">
-            <h2 className="text-center text-3xl font-bold text-white md:text-4xl lg:text-5xl">
-              What We Know
-            </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-center text-base leading-relaxed text-zinc-400 sm:text-lg">
-              Established facts that raise serious questions about the official narrative.
-            </p>
-            <div className="mt-20 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="flex flex-col items-center text-center">
+              <h2 className="text-3xl font-bold text-white md:text-4xl lg:text-5xl">
+                What We Know
+              </h2>
+              <p className="mt-4 max-w-2xl text-base leading-relaxed text-zinc-400 sm:text-lg">
+                Established facts that raise serious questions about the official narrative.
+              </p>
+            </div>
+            <div className="mx-auto mt-20 grid max-w-6xl gap-6 sm:grid-cols-2 lg:grid-cols-4">
               <article className="rounded-lg border border-dark-border bg-black p-6">
                 <h3 className="text-lg font-semibold text-white">
                   Guards falsified records
