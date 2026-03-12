@@ -11,6 +11,9 @@ export default function Home() {
             jeffreydidntkillhimself.com
           </span>
           <div className="flex flex-wrap items-center gap-4 sm:gap-8">
+            <Link href="/anomalies" className="nav-link text-xs font-semibold uppercase tracking-wider sm:text-sm">
+              Anomalies
+            </Link>
             <Link href="#what-we-know" className="nav-link text-xs font-semibold uppercase tracking-wider sm:text-sm">
               What We Know
             </Link>
@@ -33,46 +36,81 @@ export default function Home() {
           id="hero"
           className="relative overflow-hidden border-b border-dark-border bg-black px-4 py-28 sm:px-6 md:py-40"
         >
-          {/* Background collage — document layers */}
+          {/* Blueprint-style SHU tier diagram — subtle background */}
           <div
-            id="hero-background"
-            className="hero-background absolute inset-0 z-0"
+            id="hero-blueprint-bg"
+            className="pointer-events-none absolute inset-0 z-0"
             aria-hidden
           >
-            <div className="hero-doc-layer hero-doc-layer--1 left-[8%] top-[12%] h-32 w-24 sm:h-40 sm:w-28 md:h-44 md:w-32" />
-            <div className="hero-doc-layer hero-doc-layer--2 right-[10%] top-[18%] h-28 w-36 sm:h-36 sm:w-44 md:h-40 md:w-52" />
-            <div className="hero-doc-layer hero-doc-layer--3 left-[15%] bottom-[25%] h-36 w-28 sm:h-44 sm:w-32 md:h-48 md:w-36" />
-            <div className="hero-doc-layer hero-doc-layer--4 right-[12%] bottom-[20%] h-24 w-32 sm:h-28 sm:w-40 md:h-32 md:w-48" />
-            <div className="hero-doc-layer hero-doc-layer--5 left-[50%] top-[35%] h-28 w-20 sm:h-32 sm:w-24 md:h-36 md:w-28 -translate-x-1/2" />
-            <div className="hero-doc-layer hero-doc-layer--1 right-[25%] top-[45%] h-20 w-28 sm:h-24 sm:w-32 md:h-28 md:w-36" />
+            <svg
+              className="h-full w-full opacity-[0.04] grayscale blur-[1px]"
+              viewBox="0 0 400 240"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              {/* Corridor / tier center */}
+              <rect x="80" y="90" width="240" height="60" stroke="rgba(255,255,255,0.4)" strokeWidth="0.8" />
+              {/* Cell rows — left side */}
+              <rect x="20" y="50" width="50" height="35" stroke="rgba(255,255,255,0.35)" strokeWidth="0.6" />
+              <rect x="20" y="92" width="50" height="35" stroke="rgba(255,255,255,0.35)" strokeWidth="0.6" />
+              <rect x="20" y="134" width="50" height="35" stroke="rgba(255,255,255,0.35)" strokeWidth="0.6" />
+              <rect x="20" y="176" width="50" height="35" stroke="rgba(255,255,255,0.35)" strokeWidth="0.6" />
+              {/* Cell rows — right side */}
+              <rect x="330" y="50" width="50" height="35" stroke="rgba(255,255,255,0.35)" strokeWidth="0.6" />
+              <rect x="330" y="92" width="50" height="35" stroke="rgba(255,255,255,0.35)" strokeWidth="0.6" />
+              <rect x="330" y="134" width="50" height="35" stroke="rgba(255,255,255,0.35)" strokeWidth="0.6" />
+              <rect x="330" y="176" width="50" height="35" stroke="rgba(255,255,255,0.35)" strokeWidth="0.6" />
+              {/* Camera positions */}
+              <circle cx="160" cy="75" r="4" stroke="rgba(255,255,255,0.3)" strokeWidth="0.5" />
+              <circle cx="240" cy="75" r="4" stroke="rgba(255,255,255,0.3)" strokeWidth="0.5" />
+              <circle cx="320" cy="75" r="4" stroke="rgba(255,255,255,0.3)" strokeWidth="0.5" />
+              <circle cx="160" cy="165" r="4" stroke="rgba(255,255,255,0.3)" strokeWidth="0.5" />
+              <circle cx="240" cy="165" r="4" stroke="rgba(255,255,255,0.3)" strokeWidth="0.5" />
+              <circle cx="320" cy="165" r="4" stroke="rgba(255,255,255,0.3)" strokeWidth="0.5" />
+              {/* Guard station area */}
+              <rect x="165" y="98" width="70" height="44" stroke="rgba(255,255,255,0.25)" strokeWidth="0.5" strokeDasharray="3 2" />
+            </svg>
           </div>
           {/* Dark overlay for text readability */}
           <div
-            className="absolute inset-0 z-[1] bg-black/70"
+            className="absolute inset-0 z-[1] bg-black/80"
             aria-hidden
           />
           <div className="relative z-10 mx-auto max-w-4xl text-center">
-            <h1 className="text-2xl font-bold uppercase tracking-[0.12em] text-white sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
+            <h1 className="text-2xl font-extrabold uppercase leading-tight tracking-[0.12em] text-white sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
               The Death of Jeffrey Epstein
             </h1>
-            <p className="mt-6 text-base font-normal text-zinc-500 sm:text-lg md:text-xl">
+            <p className="mt-6 text-base font-normal text-zinc-400 sm:text-lg md:text-xl">
               A public record examination of events at the Metropolitan Correctional Center — August 9–10, 2019
             </p>
-            <div className="mx-auto mt-10 max-w-[600px] text-left">
-              <dl className="space-y-2.5 text-sm text-zinc-400 sm:text-base">
-                <div>
-                  <dt className="font-bold text-zinc-300">Official determination:</dt>
-                  <dd className="mt-0.5">Suicide</dd>
-                </div>
-                <div>
-                  <dt className="font-bold text-zinc-300">Location:</dt>
-                  <dd className="mt-0.5">MCC New York, Special Housing Unit</dd>
-                </div>
-                <div>
-                  <dt className="font-bold text-zinc-300">Date:</dt>
-                  <dd className="mt-0.5">August 10, 2019</dd>
-                </div>
-              </dl>
+            <div
+              id="case-facts-panel"
+              className="case-facts-panel mx-auto mt-12 max-w-4xl grid grid-cols-1 gap-4 sm:grid-cols-3"
+            >
+              <article className="rounded-md border border-white/[0.12] bg-black/40 p-5 text-center">
+                <p className="text-[11px] uppercase tracking-widest text-zinc-500">
+                  Official Determination
+                </p>
+                <p className="mt-2.5 text-lg font-medium tracking-normal text-white sm:text-xl">
+                  Suicide
+                </p>
+              </article>
+              <article className="rounded-md border border-white/[0.12] bg-black/40 p-5 text-center">
+                <p className="text-[11px] uppercase tracking-widest text-zinc-500">
+                  Location
+                </p>
+                <p className="mt-2.5 text-lg font-medium tracking-normal text-white sm:text-xl">
+                  MCC New York, Special Housing Unit
+                </p>
+              </article>
+              <article className="rounded-md border border-white/[0.12] bg-black/40 p-5 text-center">
+                <p className="text-[11px] uppercase tracking-widest text-zinc-500">
+                  Date
+                </p>
+                <p className="mt-2.5 text-lg font-medium tracking-normal text-white sm:text-xl">
+                  August 10, 2019
+                </p>
+              </article>
             </div>
             <div className="mt-10 flex flex-col items-center">
               <div className="h-px w-32 bg-zinc-600" />
@@ -91,50 +129,61 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Divider */}
+        <div className="border-t border-white/[0.08]" aria-hidden />
+        <div className="py-12" aria-hidden />
+
         {/* Why This Archive Exists — single consolidated briefing */}
         <section
           id="why-archive"
-          className="border-b border-dark-border border-t border-dark-border/80 bg-dark-featured px-4 py-20 sm:px-6 md:py-28"
+          className="bg-dark-featured px-4 py-20 sm:px-6 md:py-28"
         >
           <div className="mx-auto max-w-[700px]">
-            <h2 className="mb-12 text-center text-xl font-semibold tracking-wide text-white sm:text-2xl md:text-3xl">
-              Why This Archive Exists
-            </h2>
-            <div className="space-y-6 rounded-lg border border-dark-border/60 bg-black/30 px-6 py-8 text-zinc-300 sm:px-8 sm:py-10 sm:text-lg sm:leading-loose">
-              <p className="leading-relaxed">
-                Epstein died in federal custody on August 10, 2019 at the Metropolitan Correctional Center in New York. His death was quickly ruled a suicide.
-              </p>
-              <p className="leading-relaxed">
-                Yet many of the documented facts surrounding that night remain inconsistent, unexplained, or absent from official reporting.
-              </p>
-              <p className="leading-relaxed">
-                Thousands of pages of government records, witness interviews, investigative reports, and forensic findings exist across multiple agencies and court filings. Much of this material has never been compiled or presented in a single public resource.
-              </p>
-              <p className="leading-relaxed">
-                This archive assembles those records in one place so journalists, researchers, policymakers, and the public can examine the evidence directly.
-              </p>
+            <div className="rounded-md border border-white/[0.08] p-8">
+              <h2 className="mb-12 text-center text-xl font-semibold tracking-wide text-white sm:text-2xl md:text-3xl">
+                Why This Archive Exists
+              </h2>
+              <div className="space-y-6 text-zinc-300 sm:text-lg sm:leading-loose">
+                <p className="leading-relaxed">
+                  Epstein died in federal custody on August 10, 2019 at the Metropolitan Correctional Center in New York. His death was quickly ruled a suicide.
+                </p>
+                <p className="leading-relaxed">
+                  Yet many of the documented facts surrounding that night remain inconsistent, unexplained, or absent from official reporting.
+                </p>
+                <p className="leading-relaxed">
+                  Thousands of pages of government records, witness interviews, investigative reports, and forensic findings exist across multiple agencies and court filings. Much of this material has never been compiled or presented in a single public resource.
+                </p>
+                <p className="leading-relaxed">
+                  This archive assembles those records in one place so journalists, researchers, policymakers, and the public can examine the evidence directly.
+                </p>
+              </div>
             </div>
           </div>
         </section>
 
+        {/* Divider */}
+        <div className="border-t border-white/[0.08]" aria-hidden />
+        <div className="py-12" aria-hidden />
+
         {/* Key Unresolved Issues */}
         <section
           id="key-issues"
-          className="border-b border-dark-border bg-black px-4 py-20 sm:px-6 md:py-28"
+          className="bg-black px-4 py-20 sm:px-6 md:py-28"
         >
           <div className="mx-auto max-w-[900px]">
-            <h2 className="mb-4 text-center text-xl font-semibold tracking-wide text-white sm:text-2xl md:text-3xl">
-              Key Unresolved Issues
-            </h2>
-            <p className="mx-auto mb-12 max-w-[640px] text-center text-base leading-relaxed text-zinc-400">
-              Several documented issues surrounding Epstein&apos;s death remain unresolved or disputed in official reporting.
-            </p>
-            <ul className="grid gap-5 sm:grid-cols-2">
-              <li id="surveillance-failures">
-                <Link
-                  href="#surveillance-failures"
-                  className="block rounded-lg border border-dark-border bg-dark-surface/80 p-5 transition hover:border-zinc-600 focus:outline-none focus:ring-1 focus:ring-zinc-500"
-                >
+            <div className="rounded-md border border-white/[0.08] p-8">
+              <h2 className="mb-4 text-center text-xl font-semibold tracking-wide text-white sm:text-2xl md:text-3xl">
+                Key Unresolved Issues
+              </h2>
+              <p className="mx-auto mb-12 max-w-[640px] text-center text-base leading-relaxed text-zinc-400">
+                Several documented issues surrounding Epstein&apos;s death remain unresolved or disputed in official reporting.
+              </p>
+              <ul className="grid gap-5 sm:grid-cols-2">
+                <li id="surveillance-failures">
+                  <Link
+                    href="#surveillance-failures"
+                    className="block rounded-md border border-white/[0.12] bg-black/50 p-5 transition hover:border-white/[0.18] focus:outline-none focus:ring-1 focus:ring-white/[0.2]"
+                  >
                   <h3 className="font-semibold text-white">Surveillance failures</h3>
                   <p className="mt-2 text-sm leading-relaxed text-zinc-400">
                     Multiple cameras covering the tier and common areas reportedly malfunctioned or produced unusable footage.
@@ -144,7 +193,7 @@ export default function Home() {
               <li id="unreported-personnel">
                 <Link
                   href="#unreported-personnel"
-                  className="block rounded-lg border border-dark-border bg-dark-surface/80 p-5 transition hover:border-zinc-600 focus:outline-none focus:ring-1 focus:ring-zinc-500"
+                  className="block rounded-md border border-white/[0.12] bg-black/50 p-5 transition hover:border-white/[0.18] focus:outline-none focus:ring-1 focus:ring-white/[0.2]"
                 >
                   <h3 className="font-semibold text-white">Unreported personnel</h3>
                   <p className="mt-2 text-sm leading-relaxed text-zinc-400">
@@ -155,7 +204,7 @@ export default function Home() {
               <li id="scene-documentation">
                 <Link
                   href="#scene-documentation"
-                  className="block rounded-lg border border-dark-border bg-dark-surface/80 p-5 transition hover:border-zinc-600 focus:outline-none focus:ring-1 focus:ring-zinc-500"
+                  className="block rounded-md border border-white/[0.12] bg-black/50 p-5 transition hover:border-white/[0.18] focus:outline-none focus:ring-1 focus:ring-white/[0.2]"
                 >
                   <h3 className="font-semibold text-white">Scene documentation gaps</h3>
                   <p className="mt-2 text-sm leading-relaxed text-zinc-400">
@@ -166,7 +215,7 @@ export default function Home() {
               <li id="forensic-review">
                 <Link
                   href="#forensic-review"
-                  className="block rounded-lg border border-dark-border bg-dark-surface/80 p-5 transition hover:border-zinc-600 focus:outline-none focus:ring-1 focus:ring-zinc-500"
+                  className="block rounded-md border border-white/[0.12] bg-black/50 p-5 transition hover:border-white/[0.18] focus:outline-none focus:ring-1 focus:ring-white/[0.2]"
                 >
                   <h3 className="font-semibold text-white">Forensic disagreement</h3>
                   <p className="mt-2 text-sm leading-relaxed text-zinc-400">
@@ -177,7 +226,7 @@ export default function Home() {
               <li id="evidence-handling">
                 <Link
                   href="#evidence-handling"
-                  className="block rounded-lg border border-dark-border bg-dark-surface/80 p-5 transition hover:border-zinc-600 focus:outline-none focus:ring-1 focus:ring-zinc-500"
+                  className="block rounded-md border border-white/[0.12] bg-black/50 p-5 transition hover:border-white/[0.18] focus:outline-none focus:ring-1 focus:ring-white/[0.2]"
                 >
                   <h3 className="font-semibold text-white">Evidence handling concerns</h3>
                   <p className="mt-2 text-sm leading-relaxed text-zinc-400">
@@ -186,42 +235,49 @@ export default function Home() {
                 </Link>
               </li>
             </ul>
+            </div>
           </div>
         </section>
+
+        {/* Divider */}
+        <div className="border-t border-white/[0.08]" aria-hidden />
+        <div className="py-12" aria-hidden />
 
         {/* Primary Source Archive */}
         <section
           id="primary-source"
-          className="border-b border-dark-border bg-dark-surface px-4 py-20 sm:px-6 md:py-28"
+          className="bg-dark-surface px-4 py-20 sm:px-6 md:py-28"
         >
           <div className="mx-auto max-w-5xl">
-            <h2 className="mb-6 text-center text-2xl font-bold text-white md:text-3xl">
-              Primary Source Archive
-            </h2>
-            <p className="mx-auto mb-12 max-w-[700px] text-center text-base leading-relaxed text-zinc-400 sm:text-lg sm:leading-loose">
-              This archive brings together primary source material related to Jeffrey Epstein&apos;s detention and death, including official government reports, investigative records, forensic findings, court filings, and documented timelines. The goal is to make these materials accessible in one place so they can be reviewed directly rather than interpreted through secondary reporting.
-            </p>
-            <div className="grid gap-4 sm:grid-cols-3">
-              <article className="group rounded-lg border border-dark-border bg-black/50 p-5 transition hover:border-zinc-600 hover:bg-black/70">
+            <div className="rounded-md border border-white/[0.08] p-8">
+              <h2 className="mb-6 text-center text-2xl font-bold text-white md:text-3xl">
+                Primary Source Archive
+              </h2>
+              <p className="mx-auto mb-12 max-w-[700px] text-center text-base leading-relaxed text-zinc-400 sm:text-lg sm:leading-loose">
+                This archive brings together primary source material related to Jeffrey Epstein&apos;s detention and death, including official government reports, investigative records, forensic findings, court filings, and documented timelines. The goal is to make these materials accessible in one place so they can be reviewed directly rather than interpreted through secondary reporting.
+              </p>
+              <div className="grid gap-4 sm:grid-cols-3">
+                <article className="group rounded-md border border-white/[0.12] bg-black/50 p-5 transition hover:border-white/[0.18] hover:bg-black/60">
                 <h3 className="text-base font-semibold text-white">Official Reports</h3>
                 <p className="mt-2 text-sm leading-relaxed text-zinc-400">
                   DOJ, BOP, and OIG reports on Epstein&apos;s detention, death, and related investigations.
                 </p>
               </article>
-              <article className="group rounded-lg border border-dark-border bg-black/50 p-5 transition hover:border-zinc-600 hover:bg-black/70">
+              <article className="group rounded-md border border-white/[0.12] bg-black/50 p-5 transition hover:border-white/[0.18] hover:bg-black/60">
                 <h3 className="text-base font-semibold text-white">Government Investigations</h3>
                 <p className="mt-2 text-sm leading-relaxed text-zinc-400">
                   Congressional and agency findings, witness statements, and institutional records.
                 </p>
               </article>
-              <article className="group rounded-lg border border-dark-border bg-black/50 p-5 transition hover:border-zinc-600 hover:bg-black/70">
+              <article className="group rounded-md border border-white/[0.12] bg-black/50 p-5 transition hover:border-white/[0.18] hover:bg-black/60">
                 <h3 className="text-base font-semibold text-white">Timeline of Events</h3>
                 <p className="mt-2 text-sm leading-relaxed text-zinc-400">
                   Chronological documentation of the night of August 9–10 and related events.
                 </p>
               </article>
+              </div>
+              <DocumentGrid />
             </div>
-            <DocumentGrid />
           </div>
         </section>
 

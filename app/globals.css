@@ -27,57 +27,6 @@
   }
 }
 
-/* Hero document collage — slow drift, disabled when user prefers reduced motion */
-@keyframes hero-drift-1 {
-  0%, 100% { transform: translateY(0) rotate(-2deg); opacity: 0.12; }
-  50% { transform: translateY(12px) rotate(-2deg); opacity: 0.18; }
-}
-@keyframes hero-drift-2 {
-  0%, 100% { transform: translateY(8px) rotate(1.5deg); opacity: 0.1; }
-  50% { transform: translateY(0) rotate(1.5deg); opacity: 0.16; }
-}
-@keyframes hero-drift-3 {
-  0%, 100% { transform: translateY(-6px) rotate(-1deg); opacity: 0.14; }
-  50% { transform: translateY(4px) rotate(-1deg); opacity: 0.12; }
-}
-@keyframes hero-drift-4 {
-  0%, 100% { transform: translateY(4px) rotate(2deg); opacity: 0.11; }
-  50% { transform: translateY(-8px) rotate(2deg); opacity: 0.17; }
-}
-@keyframes hero-drift-5 {
-  0%, 100% { transform: translateY(0) rotate(-0.5deg); opacity: 0.13; }
-  50% { transform: translateY(-10px) rotate(-0.5deg); opacity: 0.15; }
-}
-
-.hero-doc-layer {
-  position: absolute;
-  border-radius: 2px;
-  background: linear-gradient(145deg, rgba(80, 80, 85, 0.4), rgba(50, 50, 55, 0.35));
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  filter: blur(2px) grayscale(1);
-  pointer-events: none;
-}
-
-@media (min-width: 768px) {
-  .hero-doc-layer {
-    animation-duration: 28s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-  }
-  .hero-doc-layer--1 { animation-name: hero-drift-1; }
-  .hero-doc-layer--2 { animation-name: hero-drift-2; animation-duration: 32s; }
-  .hero-doc-layer--3 { animation-name: hero-drift-3; animation-duration: 24s; }
-  .hero-doc-layer--4 { animation-name: hero-drift-4; animation-duration: 36s; }
-  .hero-doc-layer--5 { animation-name: hero-drift-5; animation-duration: 30s; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .hero-doc-layer {
-    animation: none;
-    opacity: 0.12;
-  }
-}
-
 /* Editorial lead paragraph and drop cap */
 .lead-paragraph {
   font-family: ui-serif, Georgia, serif;
