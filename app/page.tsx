@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { EmailSignup } from "@/components/EmailSignup";
-import { DocumentGrid } from "@/components/DocumentGrid";
 
 export default function Home() {
   return (
@@ -9,7 +8,7 @@ export default function Home() {
         <nav className="mx-auto flex max-w-5xl flex-wrap items-center justify-center gap-4 px-4 py-4 sm:gap-8 sm:px-6">
           <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-8">
             <Link href="/anomalies" className="nav-link text-xs font-semibold uppercase tracking-wider sm:text-sm">
-              Anomalies
+              Key Discrepancies
             </Link>
             <Link href="#what-we-know" className="nav-link text-xs font-semibold uppercase tracking-wider sm:text-sm">
               What We Know
@@ -154,148 +153,6 @@ export default function Home() {
                   This archive assembles those records in one place so journalists, researchers, policymakers, and the public can examine the evidence directly.
                 </p>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Divider */}
-        <div className="border-t border-white/[0.08]" aria-hidden />
-        <div className="py-12" aria-hidden />
-
-        {/* Key Discrepancies */}
-        <section
-          id="key-issues"
-          className="bg-black px-4 py-20 sm:px-6 md:py-28"
-        >
-          <div className="mx-auto max-w-[900px]">
-            <div className="rounded-md border border-white/[0.08] p-8">
-              <h2 className="mb-4 text-center text-xl font-semibold tracking-wide text-white sm:text-2xl md:text-3xl">
-                Key Discrepancies
-              </h2>
-              <p className="mx-auto mb-12 max-w-[640px] text-center text-base leading-relaxed text-zinc-400">
-                Several documented issues surrounding Epstein&apos;s death remain unresolved or disputed in official reporting.
-              </p>
-              <ul className="grid gap-5 sm:grid-cols-2">
-                <li id="surveillance-failures">
-                  <Link
-                    href="#surveillance-failures"
-                    className="block rounded-md border border-white/[0.12] bg-black/50 p-5 transition hover:border-white/[0.18] focus:outline-none focus:ring-1 focus:ring-white/[0.2]"
-                  >
-                  <h3 className="font-semibold text-white">Surveillance failures</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-zinc-400">
-                    Multiple cameras covering the tier and common areas reportedly malfunctioned or produced unusable footage.
-                  </p>
-                </Link>
-              </li>
-              <li id="unreported-personnel">
-                <Link
-                  href="#unreported-personnel"
-                  className="block rounded-md border border-white/[0.12] bg-black/50 p-5 transition hover:border-white/[0.18] focus:outline-none focus:ring-1 focus:ring-white/[0.2]"
-                >
-                  <h3 className="font-semibold text-white">Unreported personnel</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-zinc-400">
-                    Records indicate the presence of a third correctional officer not initially disclosed in public reporting.
-                  </p>
-                </Link>
-              </li>
-              <li id="scene-documentation">
-                <Link
-                  href="#scene-documentation"
-                  className="block rounded-md border border-white/[0.12] bg-black/50 p-5 transition hover:border-white/[0.18] focus:outline-none focus:ring-1 focus:ring-white/[0.2]"
-                >
-                  <h3 className="font-semibold text-white">Scene documentation gaps</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-zinc-400">
-                    The only footage of the cell interior was reportedly recorded with a handheld camera after discovery.
-                  </p>
-                </Link>
-              </li>
-              <li id="forensic-review">
-                <Link
-                  href="#forensic-review"
-                  className="block rounded-md border border-white/[0.12] bg-black/50 p-5 transition hover:border-white/[0.18] focus:outline-none focus:ring-1 focus:ring-white/[0.2]"
-                >
-                  <h3 className="font-semibold text-white">Forensic disagreement</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-zinc-400">
-                    Independent forensic review questioned whether injuries were consistent with suicide.
-                  </p>
-                </Link>
-              </li>
-              <li id="evidence-handling">
-                <Link
-                  href="#evidence-handling"
-                  className="block rounded-md border border-white/[0.12] bg-black/50 p-5 transition hover:border-white/[0.18] focus:outline-none focus:ring-1 focus:ring-white/[0.2]"
-                >
-                  <h3 className="font-semibold text-white">Evidence handling concerns</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-zinc-400">
-                    Communications indicate requests regarding destruction of FBI evidence collected during the autopsy process.
-                  </p>
-                </Link>
-              </li>
-              <li id="timeline-conflicts">
-                <Link
-                  href="/timeline-conflicts"
-                  className="group block rounded-md border border-white/[0.2] bg-black/50 p-5 transition hover:border-white/40 hover:bg-black/70 focus:outline-none focus:ring-1 focus:ring-white/40"
-                >
-                  <h3 className="font-semibold text-white">Timeline conflicts</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-zinc-400">
-                    Required observation rounds were not conducted; logs were falsified. The overnight gap and conflicting accounts leave the sequence of events unresolved.
-                  </p>
-                  <span className="mt-3 inline-flex items-center gap-1 text-xs font-semibold uppercase tracking-wider text-zinc-400 transition group-hover:text-white">
-                    View full report →
-                  </span>
-                </Link>
-              </li>
-            </ul>
-            </div>
-          </div>
-        </section>
-
-        {/* Divider */}
-        <div className="border-t border-white/[0.08]" aria-hidden />
-        <div className="py-12" aria-hidden />
-
-        {/* Primary Source Archive */}
-        <section
-          id="primary-source"
-          className="bg-dark-surface px-4 py-20 sm:px-6 md:py-28"
-        >
-          <div className="mx-auto max-w-5xl">
-            <div className="rounded-md border border-white/[0.08] p-8">
-              <h2 className="mb-6 text-center text-2xl font-bold text-white md:text-3xl">
-                Primary Source Archive
-              </h2>
-              <p className="mx-auto mb-12 max-w-[700px] text-center text-base leading-relaxed text-zinc-400 sm:text-lg sm:leading-loose">
-                This archive brings together primary source material related to Jeffrey Epstein&apos;s detention and death, including official government reports, investigative records, forensic findings, court filings, and documented timelines. The goal is to make these materials accessible in one place so they can be reviewed directly rather than interpreted through secondary reporting.
-              </p>
-              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-                <article className="group rounded-md border border-white/[0.12] bg-black/50 p-5 transition hover:border-white/[0.18] hover:bg-black/60">
-                  <h3 className="text-base font-semibold text-white">Official Reports</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-zinc-400">
-                    DOJ, BOP, and OIG reports on Epstein&apos;s detention, death, and related investigations.
-                  </p>
-                </article>
-                <article className="group rounded-md border border-white/[0.12] bg-black/50 p-5 transition hover:border-white/[0.18] hover:bg-black/60">
-                  <h3 className="text-base font-semibold text-white">Government Investigations</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-zinc-400">
-                    Congressional and agency findings, witness statements, and institutional records.
-                  </p>
-                </article>
-                <article className="group rounded-md border border-white/[0.12] bg-black/50 p-5 transition hover:border-white/[0.18] hover:bg-black/60">
-                  <h3 className="text-base font-semibold text-white">Timeline of Events</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-zinc-400">
-                    Chronological documentation of the night of August 9–10 and related events.
-                  </p>
-                </article>
-                <Link href="/timeline-conflicts">
-                  <article className="group rounded-md border border-white/[0.12] bg-black/50 p-5 transition hover:border-white/[0.18] hover:bg-black/60">
-                    <h3 className="text-base font-semibold text-white">Timeline Conflicts</h3>
-                    <p className="mt-2 text-sm leading-relaxed text-zinc-400">
-                      Reconstructing the final known movements and the overnight observation gap preceding Epstein&apos;s death.
-                    </p>
-                  </article>
-                </Link>
-              </div>
-              <DocumentGrid />
             </div>
           </div>
         </section>

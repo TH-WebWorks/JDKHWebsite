@@ -1,9 +1,9 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Surveillance and Camera System Anomalies | Epstein Investigation",
+  title: "Key Discrepancies | Epstein Investigation",
   description:
-    "Camera outages, missing footage, DVR failures, and documentation gaps at MCC that limited investigators' ability to reconstruct events surrounding Epstein's death.",
+    "Documented discrepancies in surveillance and camera evidence at MCC that limited investigators' ability to reconstruct events surrounding Jeffrey Epstein's death.",
 };
 
 export default function AnomaliesPage() {
@@ -35,7 +35,7 @@ export default function AnomaliesPage() {
         <section className="border-b border-white/[0.08] px-4 py-16 sm:px-6 md:py-24">
           <div className="mx-auto max-w-4xl">
             <p className="text-center text-xs font-semibold uppercase tracking-widest text-zinc-500">
-              Anomalies Archive
+              Key Discrepancies
             </p>
             <h1 className="mt-4 text-center text-2xl font-bold tracking-wide text-white sm:text-3xl md:text-4xl">
               Surveillance and Camera System Anomalies
@@ -48,6 +48,93 @@ export default function AnomaliesPage() {
 
         <div className="border-t border-white/[0.08]" aria-hidden />
         <div className="py-12" aria-hidden />
+
+        <section
+          id="key-issues"
+          className="bg-black px-4 py-20 sm:px-6 md:py-28"
+        >
+          <div className="mx-auto max-w-[900px]">
+            <div className="rounded-md border border-white/[0.08] p-8">
+              <h2 className="mb-4 text-center text-xl font-semibold tracking-wide text-white sm:text-2xl md:text-3xl">
+                Key Discrepancies
+              </h2>
+              <p className="mx-auto mb-12 max-w-[640px] text-center text-base leading-relaxed text-zinc-400">
+                Several documented issues surrounding Epstein&apos;s death remain unresolved or disputed in official reporting.
+              </p>
+              <ul className="grid gap-5 sm:grid-cols-2">
+                <li id="surveillance-failures">
+                  <Link
+                    href="#surveillance-failures"
+                    className="block rounded-md border border-white/[0.12] bg-black/50 p-5 transition hover:border-white/[0.18] focus:outline-none focus:ring-1 focus:ring-white/[0.2]"
+                  >
+                    <h3 className="font-semibold text-white">Surveillance failures</h3>
+                    <p className="mt-2 text-sm leading-relaxed text-zinc-400">
+                      Multiple cameras covering the tier and common areas reportedly malfunctioned or produced unusable footage.
+                    </p>
+                  </Link>
+                </li>
+                <li id="unreported-personnel">
+                  <Link
+                    href="#unreported-personnel"
+                    className="block rounded-md border border-white/[0.12] bg-black/50 p-5 transition hover:border-white/[0.18] focus:outline-none focus:ring-1 focus:ring-white/[0.2]"
+                  >
+                    <h3 className="font-semibold text-white">Unreported personnel</h3>
+                    <p className="mt-2 text-sm leading-relaxed text-zinc-400">
+                      Records indicate the presence of a third correctional officer not initially disclosed in public reporting.
+                    </p>
+                  </Link>
+                </li>
+                <li id="scene-documentation">
+                  <Link
+                    href="#scene-documentation"
+                    className="block rounded-md border border-white/[0.12] bg-black/50 p-5 transition hover:border-white/[0.18] focus:outline-none focus:ring-1 focus:ring-white/[0.2]"
+                  >
+                    <h3 className="font-semibold text-white">Scene documentation gaps</h3>
+                    <p className="mt-2 text-sm leading-relaxed text-zinc-400">
+                      The only footage of the cell interior was reportedly recorded with a handheld camera after discovery.
+                    </p>
+                  </Link>
+                </li>
+                <li id="forensic-review">
+                  <Link
+                    href="#forensic-review"
+                    className="block rounded-md border border-white/[0.12] bg-black/50 p-5 transition hover:border-white/[0.18] focus:outline-none focus:ring-1 focus:ring-white/[0.2]"
+                  >
+                    <h3 className="font-semibold text-white">Forensic disagreement</h3>
+                    <p className="mt-2 text-sm leading-relaxed text-zinc-400">
+                      Independent forensic review questioned whether injuries were consistent with suicide.
+                    </p>
+                  </Link>
+                </li>
+                <li id="evidence-handling">
+                  <Link
+                    href="#evidence-handling"
+                    className="block rounded-md border border-white/[0.12] bg-black/50 p-5 transition hover:border-white/[0.18] focus:outline-none focus:ring-1 focus:ring-white/[0.2]"
+                  >
+                    <h3 className="font-semibold text-white">Evidence handling concerns</h3>
+                    <p className="mt-2 text-sm leading-relaxed text-zinc-400">
+                      Communications indicate requests regarding destruction of FBI evidence collected during the autopsy process.
+                    </p>
+                  </Link>
+                </li>
+                <li id="timeline-conflicts">
+                  <Link
+                    href="/timeline-conflicts"
+                    className="group block rounded-md border border-white/[0.2] bg-black/50 p-5 transition hover:border-white/40 hover:bg-black/70 focus:outline-none focus:ring-1 focus:ring-white/40"
+                  >
+                    <h3 className="font-semibold text-white">Timeline conflicts</h3>
+                    <p className="mt-2 text-sm leading-relaxed text-zinc-400">
+                      Required observation rounds were not conducted; logs were falsified. The overnight gap and conflicting accounts leave the sequence of events unresolved.
+                    </p>
+                    <span className="mt-3 inline-flex items-center gap-1 text-xs font-semibold uppercase tracking-wider text-zinc-400 transition group-hover:text-white">
+                      View full report →
+                    </span>
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
 
         <section className="px-4 py-12 sm:px-6 md:py-20">
           <div className="mx-auto max-w-3xl">
