@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { EmailSignup } from "@/components/EmailSignup";
+import { DocumentGrid } from "@/components/DocumentGrid";
 
 export default function Home() {
   return (
@@ -30,9 +31,27 @@ export default function Home() {
         {/* Hero */}
         <section
           id="hero"
-          className="relative border-b border-dark-border bg-black px-4 py-28 sm:px-6 md:py-40"
+          className="relative overflow-hidden border-b border-dark-border bg-black px-4 py-28 sm:px-6 md:py-40"
         >
-          <div className="mx-auto max-w-4xl text-center">
+          {/* Background collage — document layers */}
+          <div
+            id="hero-background"
+            className="hero-background absolute inset-0 z-0"
+            aria-hidden
+          >
+            <div className="hero-doc-layer hero-doc-layer--1 left-[8%] top-[12%] h-32 w-24 sm:h-40 sm:w-28 md:h-44 md:w-32" />
+            <div className="hero-doc-layer hero-doc-layer--2 right-[10%] top-[18%] h-28 w-36 sm:h-36 sm:w-44 md:h-40 md:w-52" />
+            <div className="hero-doc-layer hero-doc-layer--3 left-[15%] bottom-[25%] h-36 w-28 sm:h-44 sm:w-32 md:h-48 md:w-36" />
+            <div className="hero-doc-layer hero-doc-layer--4 right-[12%] bottom-[20%] h-24 w-32 sm:h-28 sm:w-40 md:h-32 md:w-48" />
+            <div className="hero-doc-layer hero-doc-layer--5 left-[50%] top-[35%] h-28 w-20 sm:h-32 sm:w-24 md:h-36 md:w-28 -translate-x-1/2" />
+            <div className="hero-doc-layer hero-doc-layer--1 right-[25%] top-[45%] h-20 w-28 sm:h-24 sm:w-32 md:h-28 md:w-36" />
+          </div>
+          {/* Dark overlay for text readability */}
+          <div
+            className="absolute inset-0 z-[1] bg-black/70"
+            aria-hidden
+          />
+          <div className="relative z-10 mx-auto max-w-4xl text-center">
             <h1 className="text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
               Jeffrey Epstein&apos;s Death
             </h1>
@@ -50,19 +69,35 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Lead introduction — editorial lead with drop cap */}
+        <section
+          id="lead-introduction"
+          className="border-b border-dark-border bg-black px-4 py-16 sm:px-6 md:py-24"
+        >
+          <div className="mx-auto max-w-[700px]">
+            <p className="lead-paragraph text-left text-lg leading-relaxed text-zinc-300 sm:text-xl sm:leading-loose md:text-[1.35rem] md:leading-loose">
+              <span className="drop-cap" aria-hidden>O</span>
+              n August 10, 2019, Jeffrey Epstein died while in federal custody at the Metropolitan Correctional Center in New York. His death was quickly ruled a suicide.
+            </p>
+            <div className="mt-14 flex flex-col items-center gap-3">
+              <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-zinc-500">
+                ARCHIVE INTRODUCTION
+              </span>
+              <div className="h-px w-24 bg-zinc-600" />
+            </div>
+          </div>
+        </section>
+
         {/* About This Archive — editorial introduction */}
         <section
           id="about"
           className="border-b border-dark-border bg-black px-4 py-20 sm:px-6 md:py-28"
         >
-          <div className="mx-auto max-w-[700px]">
+          <div className="mx-auto max-w-[720px]">
             <p className="mb-10 text-center text-xs font-semibold uppercase tracking-widest text-zinc-500">
               About This Archive
             </p>
-            <div className="space-y-6 text-center text-base leading-relaxed text-zinc-300 sm:text-lg sm:leading-loose">
-              <p>
-                On August 10, 2019, Jeffrey Epstein died while in federal custody at the Metropolitan Correctional Center in New York. His death was quickly ruled a suicide.
-              </p>
+            <div className="space-y-7 text-center text-[17px] leading-relaxed text-zinc-300 sm:text-lg sm:leading-loose">
               <p>
                 Yet many of the underlying facts surrounding that night remain unclear, inconsistent, or poorly explained in official reporting.
               </p>
@@ -116,11 +151,11 @@ export default function Home() {
           id="primary-source"
           className="border-b border-dark-border bg-dark-surface px-4 py-20 sm:px-6 md:py-28"
         >
-          <div className="mx-auto max-w-[700px]">
+          <div className="mx-auto max-w-5xl">
             <h2 className="mb-6 text-center text-2xl font-bold text-white md:text-3xl">
               Primary Source Archive
             </h2>
-            <p className="mx-auto mb-12 text-center text-base leading-relaxed text-zinc-400 sm:text-lg sm:leading-loose">
+            <p className="mx-auto mb-12 max-w-[700px] text-center text-base leading-relaxed text-zinc-400 sm:text-lg sm:leading-loose">
               This archive brings together primary source material related to Jeffrey Epstein&apos;s detention and death, including official government reports, investigative records, forensic findings, court filings, and documented timelines. The goal is to make these materials accessible in one place so they can be reviewed directly rather than interpreted through secondary reporting.
             </p>
             <div className="grid gap-4 sm:grid-cols-3">
@@ -143,6 +178,7 @@ export default function Home() {
                 </p>
               </article>
             </div>
+            <DocumentGrid />
           </div>
         </section>
 
