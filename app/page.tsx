@@ -8,7 +8,7 @@ export default function Home() {
       <header className="sticky top-0 z-50 border-b border-dark-border bg-black/95 backdrop-blur supports-[backdrop-filter]:bg-black/80">
         <nav className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-4 px-4 py-4 sm:px-6">
           <span className="text-xs font-bold tracking-widest text-zinc-500">
-            jeffrey-didnt-kill-himself.com
+            jeffreydidntkillhimself.com
           </span>
           <div className="flex flex-wrap items-center gap-4 sm:gap-8">
             <Link href="#what-we-know" className="nav-link text-xs font-semibold uppercase tracking-wider sm:text-sm">
@@ -347,7 +347,7 @@ export default function Home() {
       </main>
 
       <footer className="bg-black px-6 py-8 text-center text-sm text-zinc-500">
-        <p>jeffrey-didnt-kill-himself.com</p>
+        <p>jeffreydidntkillhimself.com</p>
       </footer>
     </>
   );
