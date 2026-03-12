@@ -52,15 +52,37 @@ export default function Home() {
             aria-hidden
           />
           <div className="relative z-10 mx-auto max-w-4xl text-center">
-            <h1 className="text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
-              Jeffrey Epstein&apos;s Death
+            <h1 className="text-2xl font-bold uppercase tracking-[0.12em] text-white sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
+              The Death of Jeffrey Epstein
             </h1>
-            <p className="mt-6 text-xl font-normal tracking-tight text-zinc-400 sm:text-2xl md:text-3xl">
-              An Independent Public Archive of Evidence
+            <p className="mt-6 text-base font-normal text-zinc-500 sm:text-lg md:text-xl">
+              A public record examination of events at the Metropolitan Correctional Center — August 9–10, 2019
             </p>
-            <div className="mt-12">
+            <div className="mx-auto mt-10 max-w-[600px] text-left">
+              <dl className="space-y-2.5 text-sm text-zinc-400 sm:text-base">
+                <div>
+                  <dt className="font-bold text-zinc-300">Official determination:</dt>
+                  <dd className="mt-0.5">Suicide</dd>
+                </div>
+                <div>
+                  <dt className="font-bold text-zinc-300">Location:</dt>
+                  <dd className="mt-0.5">MCC New York, Special Housing Unit</dd>
+                </div>
+                <div>
+                  <dt className="font-bold text-zinc-300">Date:</dt>
+                  <dd className="mt-0.5">August 10, 2019</dd>
+                </div>
+              </dl>
+            </div>
+            <div className="mt-10 flex flex-col items-center">
+              <div className="h-px w-32 bg-zinc-600" />
+              <p className="mt-4 max-w-[520px] text-center font-serif text-sm italic text-zinc-400 sm:text-base">
+                Multiple documented inconsistencies remain unresolved in official reporting.
+              </p>
+            </div>
+            <div className="mt-10">
               <Link
-                href="#about"
+                href="#why-archive"
                 className="inline-block rounded-md bg-white px-8 py-4 text-base font-semibold text-black transition hover:bg-zinc-200 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black"
               >
                 Explore the Archive
@@ -69,80 +91,101 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Lead introduction — editorial lead with drop cap */}
-        <section
-          id="lead-introduction"
-          className="border-b border-dark-border bg-black px-4 py-16 sm:px-6 md:py-24"
-        >
-          <div className="mx-auto max-w-[700px]">
-            <p className="lead-paragraph text-left text-lg leading-relaxed text-zinc-300 sm:text-xl sm:leading-loose md:text-[1.35rem] md:leading-loose">
-              <span className="drop-cap" aria-hidden>O</span>
-              n August 10, 2019, Jeffrey Epstein died while in federal custody at the Metropolitan Correctional Center in New York. His death was quickly ruled a suicide.
-            </p>
-            <div className="mt-14 flex flex-col items-center gap-3">
-              <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-zinc-500">
-                ARCHIVE INTRODUCTION
-              </span>
-              <div className="h-px w-24 bg-zinc-600" />
-            </div>
-          </div>
-        </section>
-
-        {/* About This Archive — editorial introduction */}
-        <section
-          id="about"
-          className="border-b border-dark-border bg-black px-4 py-20 sm:px-6 md:py-28"
-        >
-          <div className="mx-auto max-w-[720px]">
-            <p className="mb-10 text-center text-xs font-semibold uppercase tracking-widest text-zinc-500">
-              About This Archive
-            </p>
-            <div className="space-y-7 text-center text-[17px] leading-relaxed text-zinc-300 sm:text-lg sm:leading-loose">
-              <p>
-                Yet many of the underlying facts surrounding that night remain unclear, inconsistent, or poorly explained in official reporting.
-              </p>
-              <p>
-                Important documents, witness interviews, timelines, and institutional records exist across thousands of pages of government files, court records, and investigative materials. Much of this information has never been widely reported or compiled in a single place.
-              </p>
-              <p>
-                This site was created to change that.
-              </p>
-              <p>
-                Our goal is to assemble the most complete public archive of primary material related to Epstein&apos;s death — including official reports, investigative records, forensic findings, and documented inconsistencies — so that journalists, researchers, policymakers, and the public can examine the evidence directly.
-              </p>
-              <p className="font-medium text-zinc-200">
-                This is not speculation.
-              </p>
-              <p className="font-medium text-zinc-200">
-                It is a documented record.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Why This Archive Exists */}
+        {/* Why This Archive Exists — single consolidated briefing */}
         <section
           id="why-archive"
           className="border-b border-dark-border border-t border-dark-border/80 bg-dark-featured px-4 py-20 sm:px-6 md:py-28"
         >
           <div className="mx-auto max-w-[700px]">
-            <h2 className="mb-10 text-center text-2xl font-bold text-white md:text-3xl">
+            <h2 className="mb-12 text-center text-xl font-semibold tracking-wide text-white sm:text-2xl md:text-3xl">
               Why This Archive Exists
             </h2>
-            <div className="space-y-6 text-center text-base leading-relaxed text-zinc-300 sm:text-lg sm:leading-loose">
-              <p>
-                Deaths in federal custody demand transparency and scrutiny.
+            <div className="space-y-6 rounded-lg border border-dark-border/60 bg-black/30 px-6 py-8 text-zinc-300 sm:px-8 sm:py-10 sm:text-lg sm:leading-loose">
+              <p className="leading-relaxed">
+                Epstein died in federal custody on August 10, 2019 at the Metropolitan Correctional Center in New York. His death was quickly ruled a suicide.
               </p>
-              <p>
-                The public record surrounding Jeffrey Epstein&apos;s death remains fragmented and difficult to navigate.
+              <p className="leading-relaxed">
+                Yet many of the documented facts surrounding that night remain inconsistent, unexplained, or absent from official reporting.
               </p>
-              <p>
-                By compiling these materials in one place, this archive allows the evidence to be examined openly and independently.
+              <p className="leading-relaxed">
+                Thousands of pages of government records, witness interviews, investigative reports, and forensic findings exist across multiple agencies and court filings. Much of this material has never been compiled or presented in a single public resource.
               </p>
-              <p>
-                Readers are encouraged to review the documents and draw their own conclusions.
+              <p className="leading-relaxed">
+                This archive assembles those records in one place so journalists, researchers, policymakers, and the public can examine the evidence directly.
               </p>
             </div>
+          </div>
+        </section>
+
+        {/* Key Unresolved Issues */}
+        <section
+          id="key-issues"
+          className="border-b border-dark-border bg-black px-4 py-20 sm:px-6 md:py-28"
+        >
+          <div className="mx-auto max-w-[900px]">
+            <h2 className="mb-4 text-center text-xl font-semibold tracking-wide text-white sm:text-2xl md:text-3xl">
+              Key Unresolved Issues
+            </h2>
+            <p className="mx-auto mb-12 max-w-[640px] text-center text-base leading-relaxed text-zinc-400">
+              Several documented issues surrounding Epstein&apos;s death remain unresolved or disputed in official reporting.
+            </p>
+            <ul className="grid gap-5 sm:grid-cols-2">
+              <li id="surveillance-failures">
+                <Link
+                  href="#surveillance-failures"
+                  className="block rounded-lg border border-dark-border bg-dark-surface/80 p-5 transition hover:border-zinc-600 focus:outline-none focus:ring-1 focus:ring-zinc-500"
+                >
+                  <h3 className="font-semibold text-white">Surveillance failures</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-zinc-400">
+                    Multiple cameras covering the tier and common areas reportedly malfunctioned or produced unusable footage.
+                  </p>
+                </Link>
+              </li>
+              <li id="unreported-personnel">
+                <Link
+                  href="#unreported-personnel"
+                  className="block rounded-lg border border-dark-border bg-dark-surface/80 p-5 transition hover:border-zinc-600 focus:outline-none focus:ring-1 focus:ring-zinc-500"
+                >
+                  <h3 className="font-semibold text-white">Unreported personnel</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-zinc-400">
+                    Records indicate the presence of a third correctional officer not initially disclosed in public reporting.
+                  </p>
+                </Link>
+              </li>
+              <li id="scene-documentation">
+                <Link
+                  href="#scene-documentation"
+                  className="block rounded-lg border border-dark-border bg-dark-surface/80 p-5 transition hover:border-zinc-600 focus:outline-none focus:ring-1 focus:ring-zinc-500"
+                >
+                  <h3 className="font-semibold text-white">Scene documentation gaps</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-zinc-400">
+                    The only footage of the cell interior was reportedly recorded with a handheld camera after discovery.
+                  </p>
+                </Link>
+              </li>
+              <li id="forensic-review">
+                <Link
+                  href="#forensic-review"
+                  className="block rounded-lg border border-dark-border bg-dark-surface/80 p-5 transition hover:border-zinc-600 focus:outline-none focus:ring-1 focus:ring-zinc-500"
+                >
+                  <h3 className="font-semibold text-white">Forensic disagreement</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-zinc-400">
+                    Independent forensic review questioned whether injuries were consistent with suicide.
+                  </p>
+                </Link>
+              </li>
+              <li id="evidence-handling">
+                <Link
+                  href="#evidence-handling"
+                  className="block rounded-lg border border-dark-border bg-dark-surface/80 p-5 transition hover:border-zinc-600 focus:outline-none focus:ring-1 focus:ring-zinc-500"
+                >
+                  <h3 className="font-semibold text-white">Evidence handling concerns</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-zinc-400">
+                    Communications indicate requests regarding destruction of FBI evidence collected during the autopsy process.
+                  </p>
+                </Link>
+              </li>
+            </ul>
           </div>
         </section>
 
