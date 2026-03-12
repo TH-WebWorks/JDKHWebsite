@@ -616,6 +616,10 @@ export default function AnomaliesPage() {
           <Link href="/" className="hover:text-zinc-400">
             Back to home
           </Link>
+          <span className="mx-2 text-zinc-600">|</span>
+          <Link href="/timeline-conflicts" className="hover:text-zinc-400">
+            Timeline Conflicts
+          </Link>
         </footer>
       </main>
     </>

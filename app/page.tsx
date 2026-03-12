@@ -162,7 +162,7 @@ export default function Home() {
         <div className="border-t border-white/[0.08]" aria-hidden />
         <div className="py-12" aria-hidden />
 
-        {/* Key Unresolved Issues */}
+        {/* Key Discrepancies */}
         <section
           id="key-issues"
           className="bg-black px-4 py-20 sm:px-6 md:py-28"
@@ -170,7 +170,7 @@ export default function Home() {
           <div className="mx-auto max-w-[900px]">
             <div className="rounded-md border border-white/[0.08] p-8">
               <h2 className="mb-4 text-center text-xl font-semibold tracking-wide text-white sm:text-2xl md:text-3xl">
-                Key Unresolved Issues
+                Key Discrepancies
               </h2>
               <p className="mx-auto mb-12 max-w-[640px] text-center text-base leading-relaxed text-zinc-400">
                 Several documented issues surrounding Epstein&apos;s death remain unresolved or disputed in official reporting.
@@ -231,6 +231,20 @@ export default function Home() {
                   </p>
                 </Link>
               </li>
+              <li id="timeline-conflicts">
+                <Link
+                  href="/timeline-conflicts"
+                  className="group block rounded-md border border-white/[0.2] bg-black/50 p-5 transition hover:border-white/40 hover:bg-black/70 focus:outline-none focus:ring-1 focus:ring-white/40"
+                >
+                  <h3 className="font-semibold text-white">Timeline conflicts</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-zinc-400">
+                    Required observation rounds were not conducted; logs were falsified. The overnight gap and conflicting accounts leave the sequence of events unresolved.
+                  </p>
+                  <span className="mt-3 inline-flex items-center gap-1 text-xs font-semibold uppercase tracking-wider text-zinc-400 transition group-hover:text-white">
+                    View full report →
+                  </span>
+                </Link>
+              </li>
             </ul>
             </div>
           </div>
@@ -253,25 +267,33 @@ export default function Home() {
               <p className="mx-auto mb-12 max-w-[700px] text-center text-base leading-relaxed text-zinc-400 sm:text-lg sm:leading-loose">
                 This archive brings together primary source material related to Jeffrey Epstein&apos;s detention and death, including official government reports, investigative records, forensic findings, court filings, and documented timelines. The goal is to make these materials accessible in one place so they can be reviewed directly rather than interpreted through secondary reporting.
               </p>
-              <div className="grid gap-4 sm:grid-cols-3">
+              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
                 <article className="group rounded-md border border-white/[0.12] bg-black/50 p-5 transition hover:border-white/[0.18] hover:bg-black/60">
-                <h3 className="text-base font-semibold text-white">Official Reports</h3>
-                <p className="mt-2 text-sm leading-relaxed text-zinc-400">
-                  DOJ, BOP, and OIG reports on Epstein&apos;s detention, death, and related investigations.
-                </p>
-              </article>
-              <article className="group rounded-md border border-white/[0.12] bg-black/50 p-5 transition hover:border-white/[0.18] hover:bg-black/60">
-                <h3 className="text-base font-semibold text-white">Government Investigations</h3>
-                <p className="mt-2 text-sm leading-relaxed text-zinc-400">
-                  Congressional and agency findings, witness statements, and institutional records.
-                </p>
-              </article>
-              <article className="group rounded-md border border-white/[0.12] bg-black/50 p-5 transition hover:border-white/[0.18] hover:bg-black/60">
-                <h3 className="text-base font-semibold text-white">Timeline of Events</h3>
-                <p className="mt-2 text-sm leading-relaxed text-zinc-400">
-                  Chronological documentation of the night of August 9–10 and related events.
-                </p>
-              </article>
+                  <h3 className="text-base font-semibold text-white">Official Reports</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-zinc-400">
+                    DOJ, BOP, and OIG reports on Epstein&apos;s detention, death, and related investigations.
+                  </p>
+                </article>
+                <article className="group rounded-md border border-white/[0.12] bg-black/50 p-5 transition hover:border-white/[0.18] hover:bg-black/60">
+                  <h3 className="text-base font-semibold text-white">Government Investigations</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-zinc-400">
+                    Congressional and agency findings, witness statements, and institutional records.
+                  </p>
+                </article>
+                <article className="group rounded-md border border-white/[0.12] bg-black/50 p-5 transition hover:border-white/[0.18] hover:bg-black/60">
+                  <h3 className="text-base font-semibold text-white">Timeline of Events</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-zinc-400">
+                    Chronological documentation of the night of August 9–10 and related events.
+                  </p>
+                </article>
+                <Link href="/timeline-conflicts">
+                  <article className="group rounded-md border border-white/[0.12] bg-black/50 p-5 transition hover:border-white/[0.18] hover:bg-black/60">
+                    <h3 className="text-base font-semibold text-white">Timeline Conflicts</h3>
+                    <p className="mt-2 text-sm leading-relaxed text-zinc-400">
+                      Reconstructing the final known movements and the overnight observation gap preceding Epstein&apos;s death.
+                    </p>
+                  </article>
+                </Link>
               </div>
               <DocumentGrid />
             </div>
